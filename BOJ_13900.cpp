@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int num[100002];
-int sum[100002];
+long long num[100002];
+long long sum[100002];
 
 int main()
 {
@@ -11,7 +11,7 @@ int main()
     cout.tie(0);
     int N;
     cin >> N;
-    int result = 0;
+    long long result = 0;
     for (int i = 1; i <= N; i++)
     {
         cin >> num[i];
@@ -21,6 +21,6 @@ int main()
     {
         result += num[i] * sum[i - 1];
     }
-    cout << result << endl;
+    cout << result << '\n';
     return 0;
 }
