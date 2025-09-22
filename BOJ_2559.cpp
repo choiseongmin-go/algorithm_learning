@@ -22,7 +22,7 @@ int main()
     }
     ll max = -10000000;
     ll y;
-    for (int i = 1; i < N - K + 1; i++)
+    for (int i = 1; i <= N - K + 1; i++)
     {
         y = sum[i + K - 1] - sum[i - 1];
         if (y > max)
