@@ -23,7 +23,10 @@ int main()
     ll left = 1;
     ll right = P + 1;
     ll pw = 0;
-    ll a, c, g, t = 0;
+    ll a = 0;
+    ll c = 0;
+    ll g = 0;
+    ll t = 0;
     for (int i = 1; i <= P; i++)
     {
         switch (dna[i])
@@ -43,7 +46,9 @@ int main()
         }
     }
     if (a >= A && c >= C && g >= G && t >= T)
+    {
         pw++;
+    }
     for (int i = 1; i <= S - P; i++)
     {
         switch (dna[left])
@@ -77,7 +82,9 @@ int main()
             break;
         }
         if (a >= A && c >= C && g >= G && t >= T)
+        {
             pw++;
+        }
         left++;
         right++;
     }
