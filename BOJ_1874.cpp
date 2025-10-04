@@ -7,48 +7,48 @@ int main()
     ios::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
+    stack<int> s;
+    vector<int> str;
+    vector<char> out;
     int n;
     cin >> n;
-    vector<int> v;
-    vector<char> o;
-    stack<int> s;
     int x;
-    for (int i = 1; i <= n; i++)
+    for (int i = 0; i < n; i++)
     {
         cin >> x;
-        v.push_back(x);
+        str.push_back(x);
     }
     int max = 0;
     for (int i = 0; i < n; i++)
     {
-        if (v[i] > max)
-        {
-            max = v[i];
-        }
-        if (v[i] < s.top())
+        if (s.empty() == 0 && str[i] < s.top())
         {
             cout << "NO";
             return 0;
         }
-        else if (v[i] == s.top())
+        else if (s.empty() == 0 && str[i] == s.top())
         {
-            o.push_back('-');
+            out.push_back('-');
             s.pop();
         }
         else
         {
-            for (int j = max + 1; j <= v[i]; j++)
+            for (int j = max + 1; j <= str[i]; j++)
             {
-                o.push_back('+');
+                out.push_back('+');
                 s.push(j);
             }
-            o.push_back('-');
+            out.push_back('-');
             s.pop();
         }
+        if (max < str[i])
+        {
+            max = str[i];
+        }
     }
-    for (int i = 0; i < o.size(); i++)
+    for (int i = 0; i < out.size(); i++)
     {
-        cout << o[i] << '\n';
+        cout << out[i] << '\n';
     }
     return 0;
 }
