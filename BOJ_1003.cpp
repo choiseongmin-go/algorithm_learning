@@ -5,7 +5,7 @@ using namespace std;
 
 pair<int, int> dp[41];
 
-void pre_calculate_fibonacci_calls()
+void fibonacci()
 {
     dp[0] = {1, 0};
     dp[1] = {0, 1};
@@ -21,7 +21,7 @@ int main()
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
-    pre_calculate_fibonacci_calls();
+    fibonacci();
 
     int T;
     cin >> T;
@@ -30,7 +30,7 @@ int main()
     {
         int N;
         cin >> N;
-        cout << dp[N].first << " " << dp[N].second << "\n";
+        cout << dp[N].first << " " << dp[N].second << endl;
     }
 
     return 0;
