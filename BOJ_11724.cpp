@@ -23,7 +23,6 @@ int main()
         graph[u].push_back(v);
         graph[v].push_back(u);
     }
-
     stack<int> dfs;
     dfs.push(1);
     int count = 1;

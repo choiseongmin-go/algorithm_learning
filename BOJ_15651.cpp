@@ -30,7 +30,6 @@ void solve()
         return;
 
     sequence.resize(M);
-
     dfs(0);
 }
 
