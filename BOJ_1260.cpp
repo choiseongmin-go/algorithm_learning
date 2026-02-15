@@ -2,9 +2,7 @@
 #include <vector>
 #include <queue>
 #include <algorithm>
-
 using namespace std;
-
 vector<vector<int>> Adj;
 vector<bool> Visited;
 vector<int> DFS_Path;

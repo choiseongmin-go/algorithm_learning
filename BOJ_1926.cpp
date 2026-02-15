@@ -8,7 +8,6 @@ using namespace std;
 
 int x_move[4] = {-1, 1, 0, 0};
 int y_move[4] = {0, 0, -1, 1};
-
 int N, M;
 int map[501][501];
 int visited[501][501];
